@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import CoinInfo from "./Components/coinInfo";
 import { Input } from "semantic-ui-react";
+import SideNav from "./components/SideNav";
 
 function App() {
   const API_KEY = import.meta.env.VITE_APP_API_KEY;
@@ -37,6 +38,7 @@ function App() {
   return (
     <div className="App">
       <div className="whole-page">
+      <SideNav/>
         <h1>My Crypto List</h1>
         <Input
           type="text"
@@ -63,18 +65,6 @@ function App() {
                 />
               ) : null
             )}
-        <ul>
-          {list &&
-            Object.entries(list.Data).map(([coin]) =>
-              list.Data[coin].PlatformType === "blockchain" ? (
-                <CoinInfo
-                  image={list.Data[coin].ImageUrl}
-                  name={list.Data[coin].FullName}
-                  symbol={list.Data[coin].Symbol}
-                />
-              ) : null
-            )}
-        </ul>
       </div>
     </div>
   );

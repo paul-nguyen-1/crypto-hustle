@@ -64,3 +64,34 @@ li.main-list {
   background: black;
   color: white;
 }
+
+.sidenav {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #232323;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+}
+
+.home-link 
+{
+  border:1px dotted white;
+  background:#1d1f1d;
+  width:75px;
+}
